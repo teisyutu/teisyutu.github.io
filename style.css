@@ -1,151 +1,79 @@
-@charset "UTF-8";
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-html {
-  font-size: 100%;
-}
-body {
-  color: #383e45;
-  font-size: 0.9rem;
-}
-a {
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-}
-li {
-  list-style: none;
-}
-.site-title {
-  width: 120px;
-  line-height: 1px;
-  padding: 10px 0;
-}
-.site-title a {
-  display: block;
-}
-.section-title {
-  display: inline-block;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 60px;
-  border-bottom: solid 1px #383e45;
-}
-.content-title {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.wrapper {
-  max-width: 960px;
-  margin: 0 auto 100px auto;
-  padding: 0 4%;
-  text-align: center;
-}
+  <body>
+    <header id="header" class="wrapper">
+      <h1 class="site-title"><a href="index.html"><img src="img/logo.svg" alt="Profile"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">profile</a></li>
+          <li><a href="#bicycle">猫</a></li>
+        </ul>
+      </nav>
+    </header>
 
-/*-------------------------------------------
-ヘッダー
--------------------------------------------*/
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-#header ul {
-  display: flex;
-  padding: 10px 0;
-}
-#header li {
-  margin-left: 30px;
-}
-#header li a {
-  color: #24292e;
-}
-#header li a:hover {
-  opacity: 0.7;
-}
+    <main>
+      <div id="mainvisual">
+        <img src="img/neko.jpg" alt="テキストテキストテキスト">
+      </div>
+    
 
-/*-------------------------------------------
-Mainvisual
--------------------------------------------*/
-#mainvisual {
-  margin-bottom: 80px;
-}
-#mainvisual img {
-  width: 100%;
-  max-width: 1920px;
-  height: 600px;
-  object-fit: cover;
-}
+      <section id="about" class="wrapper">
+        <h2 class="section-title">profile</h2>
+        <div class="content">
+          <img src="img/about.jpg" alt="テキストテキストテキスト">
+          <div class="text">
+            <h3 class="content-title">飼い主</h3>
+            <p>
+              大の猫好きな25歳！<br>
+              私が飼っているかわいい<br>
+              猫を紹介します
+            </p>
+          </div>
+        </div>
+      </section>
 
-/*-------------------------------------------
-About
--------------------------------------------*/
-#about .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#about img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 30px;
-}
-#about .text {
-  text-align: left;
-}
+      <section id="bicycle" class="wrapper">
+        <h2 class="section-title">猫</h2>
+        <ul>
+          <li>
+            <img src="img/mugi.jpg" alt="テキストテキストテキスト">
+            <h3 class="content-title">ムギ ♀</h3>
+            <p>もともと、子猫の時に保護されていた猫</p>今は
+              元気いっぱいに家中を走
+              り回ってます！</p>
+          </li>
+          <li>
+            <img src="img/hana.jpg" alt="テキストテキストテキスト">
+            <h3 class="content-title">花 ♂</h3>
+            <p>いたずら好きな男の子。</p>
+              たまに甘えてくるのが
+              とってもかわいいです！</p>
+          </li>
+          <li>
+            <img src="img/kurumi.jpg" alt="テキストテキストテキスト">
+            <h3 class="content-title">くるみ ♀</h3>
+            <p>一番年上の猫。</p>
+              落ち着いていていて
+              みんなのまとめ役です</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-/*-------------------------------------------
-Bicycle
--------------------------------------------*/
-#neko ul {
-  display: flex;
-  justify-content: space-between;
-}
-#neko li {
-  width: 32%;
-}
+    <footer id="footer">
+      <p>&copy; 2024 Profile</p>
+    </footer>
 
-/*-------------------------------------------
-footer
--------------------------------------------*/
-#footer {
-  font-size: 0.5rem;
-  padding: 10px 0;
-  text-align: center;
-}
+  </body>
 
-/*-------------------------------------------
-SP
--------------------------------------------*/
-@media screen and (max-width: 600px) {
-
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
-  #mainvisual img {
-    height: calc(100vh - 60px);
-  }
-
-  /*-------------------------------------------
-  About
-  -------------------------------------------*/
-  #about .content {
-    flex-direction: column;
-  }
-  #about img {
-    margin-right: 0;
-  }
-
-  /*-------------------------------------------
-  Bicycle
-  -------------------------------------------*/
-  #neko ul {
-    flex-direction: column;
-  }
-  #neko li {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
+</html>
